@@ -21,9 +21,9 @@ function Header() {
     <ChakraProvider>
       <Box bg="white" px={4} py={2} pt="10">
         <Flex align="center">
-          <Box pl={8}>
+          <Link pl={8}>
             <Image src={Logo} alt="Logo" boxSize="40px" />
-          </Box>
+          </Link>
 
           <Spacer />
 
@@ -70,6 +70,7 @@ function Header() {
                 mx={4}
                 fontWeight="bold"
                 _hover={{ textDecoration: "none", color: "gray.600" }}
+                cursor="pointer"
               >
                 HOME
               </Text>

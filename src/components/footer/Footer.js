@@ -11,12 +11,14 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    Center,
+    Center,Link
   } from "@chakra-ui/react";
-  import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+ 
   import Image from "next/image";
   import Logo from "../../assets/logo.png";
   import Logo2 from "../../assets/logo2.png";
+  import { TiSocialInstagramCircular, TiSocialLinkedinCircular } from "react-icons/ti";
+  import { TiSocialTwitterCircular } from "react-icons/ti";
   
   
   const Footer = () => {
@@ -27,19 +29,19 @@ import {
         <Container maxW="6xl">
           <SimpleGrid columns={{ base: 1, md: 5 }} spacing={4}>
             <Stack align="center" spacing={4} pr="41" justifyContent="center">
-              <Box pb={14}>
+              <Link pb={14}>
                 <Image src={Logo} alt="Logo" width={100} height={100} />
-              </Box>
+              </Link>
               <Flex justifyContent="center">
-                <Box mx={1}>
-                  <FaTwitter size={24} />
-                </Box>
-                <Box mx={1}>
-                  <FaInstagram size={24} />
-                </Box>
-                <Box mx={1}>
-                  <FaLinkedin size={24} />
-                </Box>
+                <Link mx={1}>
+                <TiSocialTwitterCircular size={35}/>
+                </Link>
+                <Link mx={1}>
+                  <TiSocialInstagramCircular  size={35} />
+                </Link>
+                <Link mx={1}>
+                  <TiSocialLinkedinCircular size={35} />
+                </Link>
               </Flex>
             </Stack>
   
@@ -225,8 +227,9 @@ import {
                   Influencers
                 </Text>
               </Box>
+
               <Flex alignItems="center">
-                <Box mr={4} pb="6">
+                <Box  mr={4} pb="6">
                   <Image src={Logo2} alt="Logo" width={6} height={6} />
                 </Box>
   
