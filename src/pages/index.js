@@ -5,14 +5,14 @@ import Header from "../components/header/Header";
 // import Form from "../components/form/Form";
 // import Business from "../components/business/Business";
 // import GreatWork from "../components/greatwork/Greatwork";
-// import Principalpage from "../components/principalpage/Principalpage";
+import Principalpage from "../components/principalpage/Principalpage";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      {/* <Principalpage />
-      <GreatWork/>
+      <Principalpage />
+      {/* <GreatWork/>
       <Business />
       <Form />
       <Plans />
