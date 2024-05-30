@@ -1,7 +1,7 @@
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-// import Contact from "../components/contact/Contact";
-// import Plans from "../components/plans/Plans";
+import Contact from "../components/contact/Contact";
+import Plans from "../components/plans/Plans";
 import Form from "../components/form/Form";
 // import Business from "../components/business/Business";
 import GreatWork from "../components/greatwork/Greatwork";
@@ -15,9 +15,9 @@ export default function Home() {
       <GreatWork/>
       {/* <Business /> */}
       <Form />
-      {/* <Plans />
+      <Plans />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
