@@ -3,8 +3,8 @@ import Header from "../components/header/Header";
 // import Contact from "../components/contact/Contact";
 // import Plans from "../components/plans/Plans";
 // import Form from "../components/form/Form";
-// import Business from "../components/business/Business";
-// import GreatWork from "../components/greatwork/Greatwork";
+import Business from "../components/business/Business";
+import GreatWork from "../components/greatwork/Greatwork";
 import Principalpage from "../components/principalpage/Principalpage";
 
 export default function Home() {
@@ -12,9 +12,9 @@ export default function Home() {
     <div>
       <Header />
       <Principalpage />
-      {/* <GreatWork/>
+      <GreatWork/>
       <Business />
-      <Form />
+      {/* <Form />
       <Plans />
       <Contact /> */}
       <Footer />
