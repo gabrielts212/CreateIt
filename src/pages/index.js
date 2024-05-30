@@ -3,7 +3,7 @@ import Header from "../components/header/Header";
 import Contact from "../components/contact/Contact";
 import Plans from "../components/plans/Plans";
 import Form from "../components/form/Form";
-// import Business from "../components/business/Business";
+import Circulecards from "../components/circulecards/Circulecards";
 import GreatWork from "../components/greatwork/Greatwork";
 import Principalpage from "../components/principalpage/Principalpage";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <Principalpage />
       <GreatWork/>
-      {/* <Business /> */}
+      <Circulecards />
       <Form />
       <Plans />
       <Contact />

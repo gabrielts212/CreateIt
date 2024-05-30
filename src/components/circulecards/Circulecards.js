@@ -10,8 +10,9 @@ import {
   } from "@chakra-ui/react";
   
   import Image from "next/image";
-  import BusinessImg from "../../assets/logobusiness.png";
+  import Logo4 from "../../assets/logobusiness.png";
   import ArrowLogo from "../../assets/setabusiness.png";
+  
   const Business = () => {
     return (
       <Flex
@@ -47,7 +48,7 @@ import {
         >
           <Flex justify="center" align="center" zIndex={1} mb="10">
             <Image
-              src={BusinessImg}
+              src={Logo4}
               alt="Improve Business"
               width={400}
               height={400}
