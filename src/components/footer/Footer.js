@@ -29,9 +29,12 @@ import {
         <Container maxW="6xl">
           <SimpleGrid columns={{ base: 1, md: 5 }} spacing={4}>
             <Stack align="center" spacing={4} pr="41" justifyContent="center">
-              <Link pb={14}>
-                <Image src={Logo} alt="Logo" width={100} height={100} />
+              <Box pb={10}>
+
+              <Link >
+                <Image src={Logo} alt="Logo" width={120} height={100} />
               </Link>
+              </Box>
               <Flex justifyContent="center">
                 <Link mx={1}>
                 <TiSocialTwitterCircular size={35}/>
@@ -217,6 +220,14 @@ import {
               </AccordionItem>
             </Accordion>
   
+
+
+
+
+
+
+
+  
             <Stack
               align="flex-start"
               spacing={2}
@@ -309,7 +320,16 @@ import {
               </Flex>
             </Stack>
           </SimpleGrid>
+
+
+
+          
         </Container>
+
+
+
+
+
         <Box textAlign="center" mt={20}>
           <Divider w="90%" borderWidth={2} borderColor="gray" mb={5} mx="auto" />
           <Text>Resource by Blogger LandingPage - ©2024</Text>

@@ -22,7 +22,7 @@ function Header() {
       <Box bg="white" px={4} py={2} pt="10">
         <Flex align="center">
           <Link pl={8}>
-            <Image src={Logo} alt="Logo" boxSize="40px" />
+            <Image src={Logo} alt="Logo"  />
           </Link>
 
           <Spacer />
