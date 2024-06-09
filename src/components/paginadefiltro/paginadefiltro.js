@@ -86,9 +86,9 @@ export default function Home() {
         <Button
           key={i}
           onClick={() => handlePageChange(i)}
-          bg={currentPage === i ? '#3182CE' : 'gray.300'}
+          bg={currentPage === i ? '#66B2C2' : 'gray.300'}
           color="white"
-          _hover={{ bg: '#3182CE' }}
+          _hover={{ bg: '#66B2C2' }}
         >
           {i}
         </Button>
@@ -99,15 +99,15 @@ export default function Home() {
 
   return (
     <Container maxW="container.xl" py={8}>
-      <Heading mb={8} textAlign="center" color="teal.600">Lista de Produtos</Heading>
+      <Heading mb={8} textAlign="center" color="#66B2C2">Lista de Produtos</Heading>
       <VStack spacing={4} mb={8}>
         <Wrap spacing={4} justify="center">
           <WrapItem>
             <Button
               onClick={() => setCategoryFilter('')}
-              bg={categoryFilter === '' ? '#3182CE' : 'gray.300'}
+              bg={categoryFilter === '' ? '#66B2C2' : 'gray.300'}
               color="white"
-              _hover={{ bg: '#3182CE' }}
+              _hover={{ bg: '#66B2C2' }}
             >
               Todas as Categorias
             </Button>
@@ -116,9 +116,9 @@ export default function Home() {
             <WrapItem key={index}>
               <Button
                 onClick={() => setCategoryFilter(category)}
-                bg={categoryFilter === category ? '#3182CE' : 'gray.300'}
+                bg={categoryFilter === category ? '#66B2C2' : 'gray.300'}
                 color="white"
-                _hover={{ bg: '#3182CE' }}
+                _hover={{ bg: '#66B2C2' }}
               >
                 {category}
               </Button>
@@ -130,15 +130,15 @@ export default function Home() {
           value={nameFilter}
           onChange={(e) => setNameFilter(e.target.value)}
           bg="white"
-          borderColor="teal.400"
-          focusBorderColor="teal.600"
+          borderColor="#66B2C2"
+          focusBorderColor="#66B2C2"
           size="lg"
           shadow="sm"
         />
       </VStack>
       {loading ? (
         <Box textAlign="center" py={8}>
-          <Spinner size="xl" color="teal.500" />
+          <Spinner size="xl" color="#66B2C2" />
         </Box>
       ) : (
         <>
@@ -148,7 +148,7 @@ export default function Home() {
                 <HStack spacing={4}>
                   <Image src={item.image} alt={item.title} boxSize="150px" objectFit="cover" borderRadius="md" />
                   <Box>
-                    <Heading size="md" color="teal.600">{item.title}</Heading>
+                    <Heading size="md" color="#66B2C2">{item.title}</Heading>
                     <Text fontSize="sm" color="gray.500">
                       {item.category}
                     </Text>
@@ -165,9 +165,9 @@ export default function Home() {
               onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
               isDisabled={currentPage === 1}
               aria-label="Previous Page"
-              bg="teal.500"
+              bg="#66B2C2"
               color="white"
-              _hover={{ bg: 'teal.600' }}
+              _hover={{ bg: '#66B2C2' }}
             />
             {renderPageNumbers()}
             <IconButton
@@ -175,9 +175,9 @@ export default function Home() {
               onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
               isDisabled={currentPage === totalPages}
               aria-label="Next Page"
-              bg="teal.500"
+              bg="#66B2C2"
               color="white"
-              _hover={{ bg: 'teal.600' }}
+              _hover={{ bg: '#66B2C2' }}
             />
           </HStack>
         </>

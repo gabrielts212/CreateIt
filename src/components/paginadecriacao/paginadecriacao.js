@@ -26,7 +26,6 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { DeleteIcon, StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { motion } from 'framer-motion';
 import axios from 'axios';
 
 export default function Home() {
@@ -101,24 +100,24 @@ export default function Home() {
 
   return (
     <Container maxW="container.xl" py={8} minHeight="80vh">
-      <Heading mb={8} textAlign="center" color="teal.600">Produtos e Favoritos</Heading>
+      <Heading mb={8} textAlign="center" color="#66B2C2">Produtos e Favoritos</Heading>
       <Grid templateColumns={{ base: '1fr', lg: '2fr 1fr' }} gap={6}>
         <GridItem>
-          <Heading size="lg" mb={4} color="teal.500">Produtos</Heading>
+          <Heading size="lg" mb={4} color="#66B2C2">Produtos</Heading>
           <VStack spacing={4} mb={4}>
             <Input
               placeholder="Buscar produtos"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               bg="white"
-              borderColor="teal.400"
-              focusBorderColor="teal.600"
+              borderColor="#66B2C2"
+              focusBorderColor="#66B2C2"
             />
-            <Button onClick={onOpen} colorScheme="teal" variant="solid">Adicionar Novo Produto</Button>
+            <Button onClick={onOpen} colorScheme="teal" variant="solid" bg="#66B2C2" _hover={{ bg: '#66B2C2' }}>Adicionar Novo Produto</Button>
           </VStack>
           {loading ? (
             <Box textAlign="center" py={8}>
-              <Spinner size="xl" color="teal.500" />
+              <Spinner size="xl" color="#66B2C2" />
             </Box>
           ) : (
             <>
@@ -155,9 +154,9 @@ export default function Home() {
                   onClick={() => handlePageChange(-1, 'products')}
                   isDisabled={currentPage === 1}
                   aria-label="Previous Page"
-                  bg="teal.500"
+                  bg="#66B2C2"
                   color="white"
-                  _hover={{ bg: 'teal.600' }}
+                  _hover={{ bg: '#66B2C2' }}
                 />
                 <Text>
                   Página {currentPage} de {totalPages}
@@ -167,16 +166,16 @@ export default function Home() {
                   onClick={() => handlePageChange(1, 'products')}
                   isDisabled={currentPage === totalPages}
                   aria-label="Next Page"
-                  bg="teal.500"
+                  bg="#66B2C2"
                   color="white"
-                  _hover={{ bg: 'teal.600' }}
+                  _hover={{ bg: '#66B2C2' }}
                 />
               </HStack>
             </>
           )}
         </GridItem>
         <GridItem>
-          <Heading size="lg" mb={4} color="teal.500">Favoritos</Heading>
+          <Heading size="lg" mb={4} color="#66B2C2">Favoritos</Heading>
           <List spacing={3}>
             {currentFavItems.map((product) => (
               <ListItem key={product.id} p={4} borderWidth="1px" borderRadius="lg">
@@ -200,9 +199,9 @@ export default function Home() {
               onClick={() => handlePageChange(-1, 'favorites')}
               isDisabled={currentFavPage === 1}
               aria-label="Previous Page"
-              bg="teal.500"
+              bg="#66B2C2"
               color="white"
-              _hover={{ bg: 'teal.600' }}
+              _hover={{ bg: '#66B2C2' }}
             />
             <Text>
               Página {currentFavPage} de {totalFavPages}
@@ -212,9 +211,9 @@ export default function Home() {
               onClick={() => handlePageChange(1, 'favorites')}
               isDisabled={currentFavPage === totalFavPages}
               aria-label="Next Page"
-              bg="teal.500"
+              bg="#66B2C2"
               color="white"
-              _hover={{ bg: 'teal.600' }}
+              _hover={{ bg: '#66B2C2' }}
             />
           </HStack>
         </GridItem>
@@ -232,16 +231,16 @@ export default function Home() {
                 value={newProduct.title}
                 onChange={(e) => setNewProduct({ ...newProduct, title: e.target.value })}
                 bg="white"
-                borderColor="teal.400"
-                focusBorderColor="teal.600"
+                borderColor="#66B2C2"
+                focusBorderColor="#66B2C2"
               />
               <Input
                 placeholder="URL da imagem"
                 value={newProduct.image}
                 onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
                 bg="white"
-                borderColor="teal.400"
-                focusBorderColor="teal.600"
+                borderColor="#66B2C2"
+                focusBorderColor="#66B2C2"
               />
             </VStack>
           </ModalBody>
@@ -249,7 +248,7 @@ export default function Home() {
             <Button onClick={onClose} mr={3}>
               Cancelar
             </Button>
-            <Button onClick={createProduct} colorScheme="teal">
+            <Button onClick={createProduct} colorScheme="teal" bg="#66B2C2">
               Adicionar
             </Button>
           </ModalFooter>
