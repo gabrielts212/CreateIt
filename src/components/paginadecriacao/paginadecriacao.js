@@ -99,7 +99,7 @@ export default function Home() {
   const totalFavPages = Math.ceil(favorites.length / itemsPerPage);
 
   return (
-    <Container maxW="container.xl" py={8} minHeight="80vh">
+    <Container maxW="container.xl" py={8} minHeight="80vh" mt="16">
       <Heading mb={8} textAlign="center" color="#66B2C2">Produtos e Favoritos</Heading>
       <Grid templateColumns={{ base: '1fr', lg: '2fr 1fr' }} gap={6}>
         <GridItem>

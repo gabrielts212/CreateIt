@@ -89,6 +89,7 @@ export default function Home() {
           bg={currentPage === i ? '#66B2C2' : 'gray.300'}
           color="white"
           _hover={{ bg: '#66B2C2' }}
+          size="sm"
         >
           {i}
         </Button>
@@ -98,7 +99,7 @@ export default function Home() {
   };
 
   return (
-    <Container maxW="container.xl" py={8}>
+    <Container maxW="container.xl" py={8} mt="16">
       <Heading mb={8} textAlign="center" color="#66B2C2">Lista de Produtos</Heading>
       <VStack spacing={4} mb={8}>
         <Wrap spacing={4} justify="center">
@@ -145,14 +146,16 @@ export default function Home() {
           <List spacing={4} mb={8}>
             {currentItems.map((item) => (
               <ListItem key={item.id} p={6} borderWidth="1px" borderRadius="lg" shadow="md">
-                <HStack spacing={4}>
-                  <Image src={item.image} alt={item.title} boxSize="150px" objectFit="cover" borderRadius="md" />
-                  <Box>
+                <HStack spacing={4} align="start" wrap="wrap">
+                  <Image src={item.image} alt={item.title} boxSize={{ base: '100px', md: '150px' }} objectFit="cover" borderRadius="md" />
+                  <Box maxW={{ base: '100%', md: '70%' }}>
                     <Heading size="md" color="#66B2C2">{item.title}</Heading>
                     <Text fontSize="sm" color="gray.500">
                       {item.category}
                     </Text>
-                    <Box mt={2} color="gray.700">{item.description}</Box>
+                    <Text mt={2} color="gray.700" noOfLines={{ base: 3, md: 2 }} isTruncated>
+                      {item.description}
+                    </Text>
                   </Box>
                 </HStack>
               </ListItem>
