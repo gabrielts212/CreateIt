@@ -102,7 +102,7 @@ import {
             height="80px"
             borderTopLeftRadius={{ base: "40px", md: "80px" }}
             borderTopRightRadius={{ base: "40px", md: "80px" }}
-            bg="white"
+            bg="#F8EFBA"
             zIndex={1}
           />
         </Flex>

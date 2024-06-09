@@ -31,18 +31,18 @@ import {
             <Stack align="center" spacing={4} pr="41" justifyContent="center">
               <Box pb={10}>
 
-              <Link >
-                <Image src={Logo} alt="Logo" width={120} height={100} />
+              <Link href="/"  >
+                <Image  href="/" src={Logo} alt="Logo" width={120} height={100} />
               </Link>
               </Box>
               <Flex justifyContent="center">
-                <Link mx={1}>
+                <Link mx={1} href="/" >
                 <TiSocialTwitterCircular size={35}/>
                 </Link>
-                <Link mx={1}>
+                <Link mx={1} href="/" >
                   <TiSocialInstagramCircular  size={35} />
                 </Link>
-                <Link mx={1}>
+                <Link mx={1} href="/" >
                   <TiSocialLinkedinCircular size={35} />
                 </Link>
               </Flex>
@@ -309,7 +309,7 @@ import {
                 </Text>
               </Box>
               <Flex alignItems="center">
-                <Box mr={4} pb="1">
+                <Box  mr={4} pb="1">
                   <Image src={Logo2} alt="Logo" width={6} height={6} />
                 </Box>
                 <Stack spacing={0}>

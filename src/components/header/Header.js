@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Logo from "../../assets/logo.png";
+// import  Link from "next/link";
+
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,7 +23,7 @@ function Header() {
     <ChakraProvider>
       <Box bg="white" px={4} py={2} pt="10">
         <Flex align="center">
-          <Link pl={8}>
+          <Link href="/"  pl={8}>
             <Image src={Logo} alt="Logo"  />
           </Link>
 
@@ -65,7 +67,10 @@ function Header() {
             </Button>
           ) : (
             <Flex align="center">
+              <a href="/" >
+              
               <Text
+             
                 as="span"
                 mx={4}
                 fontWeight="bold"
@@ -74,22 +79,31 @@ function Header() {
               >
                 HOME
               </Text>
+              </a>
 
-              <Link
-                as="span"
-                mx={4}
-                _hover={{ textDecoration: "none", color: "gray.600" }}
-              >
-                SERVICE
-              </Link>
+              <a href="/paginadeprodutos" passHref>
+            <Text
+              as="a"
+              mx={4}
+              _hover={{ textDecoration: "none", color: "gray.600" }}
+              cursor="pointer"
+              textDecoration="none"
+            >
+              SERVICE
+            </Text>
+          </a>
 
-              <Link
-                as="span"
-                mx={4}
-                _hover={{ textDecoration: "none", color: "gray.600" }}
-              >
-                PARTNER
-              </Link>
+              <a href="/paginadefiltros" passHref>
+            <Text
+              as="a"
+              mx={4}
+              _hover={{ textDecoration: "none", color: "gray.600" }}
+              cursor="pointer"
+              textDecoration="none"
+            >
+              PARTNER
+            </Text>
+          </a>
 
               <Button
                 ml={4}
@@ -126,13 +140,25 @@ function Header() {
               SERVICE
             </Link>
 
-            <Link
+
+
+            <a
+            href="/paginadefiltros"  passHref
               as="span"
               my={2}
               _hover={{ textDecoration: "none", color: "gray.600" }}
             >
               PARTNER
-            </Link>
+            </a>
+            {/* <a
+          href="/registerpage"
+          className="block mt-4 text-green-500 hover:text-green-400 text-base"
+        >
+          Ainda não tem uma conta? Cadastre-se
+        </a> */}
+
+
+
 
             <Button
               mt={4}
