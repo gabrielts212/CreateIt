@@ -11,8 +11,6 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Logo from "../../assets/logo.png";
-// import  Link from "next/link";
-
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,10 +19,10 @@ function Header() {
 
   return (
     <ChakraProvider>
-      <Box bg="white" px={4} py={2} pt="10">
+      <Box bg="#F8EFBA" px={4} py={2} pt="5" pb="5">
         <Flex align="center">
-          <Link href="/"  pl={8}>
-            <Image src={Logo} alt="Logo"  />
+          <Link href="/" pl={8}>
+            <Image src={Logo} alt="Logo" />
           </Link>
 
           <Spacer />
@@ -35,10 +33,11 @@ function Header() {
               display="flex"
               alignItems="center"
               justifyContent="center"
-              bgColor="white"
-              bg="white"
+              bg="#F8EFBA"
               w={120}
               h={10}
+              _hover={{ bg: "#F8EFBA" }}
+              _active={{ bg: "#F8EFBA" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,43 +66,41 @@ function Header() {
             </Button>
           ) : (
             <Flex align="center">
-              <a href="/" >
-              
-              <Text
-             
-                as="span"
-                mx={4}
-                fontWeight="bold"
-                _hover={{ textDecoration: "none", color: "gray.600" }}
-                cursor="pointer"
-              >
-                HOME
-              </Text>
+              <a href="/">
+                <Text
+                  as="span"
+                  mx={4}
+                  fontWeight="bold"
+                  _hover={{ textDecoration: "none", color: "gray.600" }}
+                  cursor="pointer"
+                >
+                  HOME
+                </Text>
               </a>
 
               <a href="/paginadeprodutos" passHref>
-            <Text
-              as="a"
-              mx={4}
-              _hover={{ textDecoration: "none", color: "gray.600" }}
-              cursor="pointer"
-              textDecoration="none"
-            >
-              SERVICE
-            </Text>
-          </a>
+                <Text
+                  as="a"
+                  mx={4}
+                  _hover={{ textDecoration: "none", color: "gray.600" }}
+                  cursor="pointer"
+                  textDecoration="none"
+                >
+                  SERVICE
+                </Text>
+              </a>
 
               <a href="/paginadefiltros" passHref>
-            <Text
-              as="a"
-              mx={4}
-              _hover={{ textDecoration: "none", color: "gray.600" }}
-              cursor="pointer"
-              textDecoration="none"
-            >
-              PARTNER
-            </Text>
-          </a>
+                <Text
+                  as="a"
+                  mx={4}
+                  _hover={{ textDecoration: "none", color: "gray.600" }}
+                  cursor="pointer"
+                  textDecoration="none"
+                >
+                  PARTNER
+                </Text>
+              </a>
 
               <Button
                 ml={4}
@@ -140,25 +137,16 @@ function Header() {
               SERVICE
             </Link>
 
-
-
             <a
-            href="/paginadefiltros"  passHref
+              href="/paginadefiltros"
+              passHref
               as="span"
               my={2}
               _hover={{ textDecoration: "none", color: "gray.600" }}
             >
               PARTNER
             </a>
-            {/* <a
-          href="/registerpage"
-          className="block mt-4 text-green-500 hover:text-green-400 text-base"
-        >
-          Ainda não tem uma conta? Cadastre-se
-        </a> */}
-
-
-
+          
 
             <Button
               mt={4}
